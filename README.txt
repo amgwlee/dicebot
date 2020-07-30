@@ -6,5 +6,3 @@ If you want to fork it or play around (or you're future me that needs a refreshe
 2. Make sure node.js is installed
 3. Build and install with npm install.
 4. To run, go to project root and run npm start.
-
-gi
