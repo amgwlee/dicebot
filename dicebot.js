@@ -284,14 +284,11 @@ bot.on('/roll', (msg) => {
 
 /*****FUNCTIONS*****/
 
+//Had to add this checkTime function to everything, 
+//otherwise if the bot goes down for a period of time and then starts up again,
+//all incoming triggers and commands back up in a queue and it fires off all responses at once.
 function checkTime(msgDate) {
-    console.log("checking timestamps");
     var formatMsgDate = new Date(msgDate * 1000);
-
-    console.log("Incoming message date: " + msgDate);
-    console.log("Formatted message date: " + formatMsgDate.getTime());
-    console.log("Dicebot startup date: " + startTime);
-    console.log("T or F: " + (formatMsgDate.getTime() >= startTime));
 
     return formatMsgDate.getTime() >= startTime;
 }
